@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: python-api
+  annotations:
+    gitops-test: "stage-15"
 
 spec:
   replicas: {{ .Values.pythonApi.replicaCount }}
